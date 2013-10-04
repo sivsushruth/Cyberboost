@@ -1,4 +1,4 @@
 Cyberboost
 ==========
 
-An internet download manager that works on the multi threading through a distributed network
+An internet download manager that works on multi threading through a distributed network
