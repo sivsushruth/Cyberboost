@@ -84,23 +84,23 @@ def progress(download_t, download_d, upload_t, upload_d):
 if __name__ == "__main__":
 	
 		
-	link = "http://media.ch9.ms/ch9/2dea/b3fc154f-ce36-4c18-9356-bc5d0aa82dea/WP8JumpStart01a.wmv"
+	link = "http://av.vimeo.com/88785/872/43263156.mp4?token=1380857094_352ec82d2d18242330104b3b12de4c5e"
 	url= link
+	response = 'http://sushruth.bits-goa.com/cyberboost.php?url='+ url
+	result = urllib2.urlopen(response)
+	html = result.read()
+	filesize =  html.split('Content-Length: ')[1]
+	filesize = filesize.split('\n')[0]
+	print filesize
+	length= filesize
 
 	filename =  link.split('?')[0]
 	filename = filename.split('/')[-1]
 	print filename
-	'''
-	print "opening url:", link
-	site = urllib.urlopen(link)
-	meta = site.info()
-	print "Content-Length:", meta.getheaders("Content-Length")[0]
-	length =  meta.getheaders("Content-Length")[0];
-	#print length
+
+
 	
-	'''
 	i=1
-	length = 147680069
 	thread1= Thread(target = download, args=["10.3.8.21"+str(i+2),url,filename+str(i)+".dat", "0", str(int(((int(length)/6))*i))])
 	i=i+1
 	thread2= Thread(target = download, args=["10.3.8.21"+str(i+2),url,filename+str(i)+".dat", str(int(((int(length)/6)*(i-1)))+1), str(int(((int(length)/6))*i))])
@@ -115,11 +115,17 @@ if __name__ == "__main__":
 	
 	
 	thread1.start()
+	#time.sleep(5)
 	thread2.start()
+	#time.sleep(5)
 	thread3.start()
+	#time.sleep(5)
 	thread4.start()
+	#time.sleep(5)
 	thread5.start()
+	#time.sleep(5)
 	thread6.start()
+	#time.sleep(5)
 	jo()
 
 
