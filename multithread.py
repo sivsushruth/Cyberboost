@@ -15,13 +15,6 @@ def jo():
 	thread5.join()
 	thread6.join()
 
-def login1():
-	login("f2013637","448820","10.3.8.213")
-	login("f2013637","448820","10.3.8.214")
-	login("f2013314","428203","10.3.8.215")
-	login("f2013306","442934","10.3.8.216")
-	login("f2013306","442934","10.3.8.217")
-	login("f2013306","442934","10.3.8.218")
 
 def download(ip,url,filename,ranges,rangef):
 	print "==> Downloading File: ",filename," URL: ",url
